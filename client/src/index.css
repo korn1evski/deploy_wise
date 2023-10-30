@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "@fontsource/roboto/300.css";
+@import "@fontsource/roboto/400.css";
+@import "@fontsource/roboto/500.css";
+@import "@fontsource/roboto/700.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #EDF8F7;
+  font-family: 'Karla', sans-serif;
+  font-family: 'Krub', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.light {
+  --color-bg-primary: #f3faf9;
+  --color-bg-secondary: #87cfc7;
+  --color-bg-tertiary: #daf0ee;
+  --color-bg-menu: #3D5D5A;
+  
+  --color-text-primary: #517C77;
+
+}
