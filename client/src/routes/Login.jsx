@@ -29,7 +29,7 @@ const Login = () => {
       const handleCallbackResponse = async () => {
         try {
           const responseToken = await axios.post(
-            "http://localhost:8080/api/v1/authentication/registration",
+            "https://neptun.md:8080/api/v1/authentication/registration",
             {
               googleIdToken: tokenResponse,
             }
