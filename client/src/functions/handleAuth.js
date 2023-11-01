@@ -18,7 +18,7 @@ export const handleAuth = async (navigate, setLoading) => {
       setLoading(true);
       try {
         const response = await axios.post(
-          "http://neptun.md:8080/api/v1/authentication/refresh",
+          "https://neptun.md:8443/api/v1/authentication/refresh",
           {
             refreshToken: refreshToken,
           }

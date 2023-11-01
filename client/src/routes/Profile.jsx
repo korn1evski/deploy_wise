@@ -23,8 +23,8 @@ const Profile = () => {
   }, []);
 
   const initRequest = async () => {
-    const profileUrl = "http://neptun.md:8080/api/v1/youtube/profile";
-    const statisticsUrl = "http://neptun.md:8080/api/v1/youtube/statistics";
+    const profileUrl = "https://neptun.md:8443/api/v1/youtube/profile";
+    const statisticsUrl = "https://neptun.md:84430/api/v1/youtube/statistics";
     await handleAuth(navigate, setLoading);
     const accessToken = getCookie("access_token");
     const profileResponse = await axios.get(profileUrl, {
