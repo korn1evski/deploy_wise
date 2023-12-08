@@ -39,7 +39,7 @@ export default function Statistics() {
 
   const fetchSummary = async () => {
     try {
-      const res = await axios.get(`http://127.0.0.1:5050/results/${videoId}`);
+      const res = await axios.get(`https://neptun.md:5000/results/${videoId}`);
       setData(res.data);
       console.log(res.data);
     } catch (error) {
