@@ -10,6 +10,7 @@ import { setPrevPage } from "../../features/resultsSlice";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import Skeleton from "react-loading-skeleton";
+import { addVideo } from "../../features/historySlice";
 
 export default function Statistics() {
   const API_KEY = process.env.REACT_APP_API_KEY;
@@ -34,6 +35,7 @@ export default function Statistics() {
       );
       setTags(newTags);
       setVideoInfo(response.data.items[0].snippet);
+      dispatch(addVideo({ videoId: videoId, name: response.data.items[0].snippet.title}));
     }
   };
 
