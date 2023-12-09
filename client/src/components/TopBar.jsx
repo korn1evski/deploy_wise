@@ -8,6 +8,7 @@ import { setText } from "../features/searchSlice";
 import { Link, useNavigate } from "react-router-dom";
 import { deleteCookie } from "../functions/cookies";
 import logo from "../assets/wise_logo.svg";
+import { setHistory } from "../features/historySlice";
 
 const TopBar = () => {
   const dispatch = useDispatch();
@@ -44,6 +45,7 @@ const TopBar = () => {
     deleteCookie("refresh_token");
     setIsOpen(false);
     navigate("/login");
+    dispatch(setHistory([]))
   };
 
   return (

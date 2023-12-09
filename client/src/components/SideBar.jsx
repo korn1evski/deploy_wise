@@ -30,14 +30,14 @@ const SideBar = () => {
       <div className={`bg-menu w-[300px] min-h-[100vh] flex flex-col items-center gap-4`}>
       </div>
 
-      <div className={`bg-menu w-[280px] left-0 top-0 min-h-[100vh] flex flex-col items-center gap-4 fixed`}>
+      {videosHistory.length != 0 && <div className={`bg-menu w-[280px] left-0 top-0 min-h-[100vh] flex flex-col items-center gap-4 fixed`}>
       <div className="h-[100px]"></div>
       {videosHistory.map(video => (
                       <HistoryTile name={video.name} videoId={video.videoId} key={video.videoId}/>
             ))}
 
             {videosHistory.length == 0 && <div><div  className="h-[500px]"></div><h1 className="text-[#fff] text-[20px]">NO HISTORY YET</h1></div>}
-      </div>
+      </div>}
     </>
   ) : (
     <>
